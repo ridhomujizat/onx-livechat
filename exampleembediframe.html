@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script type="module" crossorigin src="/onx_dev.js"></script>
+  </head>
+  <body>
+    <div id="onx-livechat-body"></div>
+    <div id="onx-livechat-button"></div>
+
+    <script>
+      var elementIframe = document.createElement("iframe");
+      elementIframe.setAttribute("id", "INFwgChat");
+      elementIframe.setAttribute("src", "about:blank");
+      document.body.appendChild(elementIframe);
+
+      var frame = document.getElementById("INFwgChat");
+      frame.contentDocument.write(
+        '<div id="onx-livechat-body"></div><div id="onx-livechat-button"></div><script type="module" async defer="defer" src="http://127.0.0.1:5500/onx_dev.js"><\/script>'
+      );
+      // setTimeout(() => {}, 200);
+    </script>
+  </body>
+</html>
